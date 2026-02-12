@@ -11,7 +11,7 @@ const slides = [
     title: "Tech Mega Sale",
   },
   {
-    img: "https://i.pinimg.com/736x/6e/00/d4/6e00d40103b78e2657dd043f047d003b.jpg",
+    img: "https://i.pinimg.com/1200x/51/5a/d3/515ad3b6e9439c625ae6cae65d6f782f.jpg",
     title: "Summer Fashion Frenzy",
   },
 ];
