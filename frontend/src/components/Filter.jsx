@@ -15,7 +15,6 @@ export default function Filter({
         <FaFilter /> Filters
       </h5>
 
-      {/* Category Filter */}
       <div className="mb-6">
         <h6 className="text-white font-semibold mb-3 text-sm">Category</h6>
         {categories.map((category) => (
@@ -38,7 +37,6 @@ export default function Filter({
         ))}
       </div>
 
-      {/* Price Range Filter */}
       <div className="mb-6">
         <h6 className="text-white font-semibold mb-3 text-sm">Price Range</h6>
         <input
@@ -58,7 +56,6 @@ export default function Filter({
         </div>
       </div>
 
-      {/* Reset Button */}
       <button
         onClick={onReset}
         className="w-full flex items-center justify-center gap-2 py-2 px-4 border border-primary-light text-primary-light rounded-lg text-sm font-medium transition-all hover:bg-primary-light hover:text-bg-darker"

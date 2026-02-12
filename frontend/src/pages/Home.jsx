@@ -5,14 +5,11 @@ import Carousel from "../components/Carousel";
 export default function Home() {
   return (
     <div>
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#1e3c72] to-[#2a5298] py-16 md:py-24 relative overflow-hidden">
-        {/* Gradient overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(25,135,84,0.15)_0%,transparent_60%)] pointer-events-none" />
 
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Left Content */}
             <div className="text-center lg:text-left">
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white mb-5 leading-tight">
                 Shopping Made Simple, Fast & Fun
@@ -37,7 +34,6 @@ export default function Home() {
                 </a>
               </div>
 
-              {/* Stats */}
               <div className="flex justify-center lg:justify-start gap-8 mt-10">
                 <div className="text-center">
                   <h5 className="text-xl font-bold text-white">12K+</h5>
@@ -54,19 +50,16 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right Image */}
             <div className="text-center mt-8 lg:mt-0">
               <img
                 src="https://i.pinimg.com/736x/f2/f5/a7/f2f5a771253fb12461eba32153fdb643.jpg"
                 alt="Happy online shopping"
-                className="w-full max-h-[520px] object-cover rounded-2xl shadow-2xl mx-auto"
+                className="w-100 max-h-[700px] object-cover rounded-2xl shadow-2xl mx-auto"
               />
             </div>
           </div>
         </div>
       </section>
-
-      {/* Carousel */}
       <div id="deals-carousel">
         <Carousel />
       </div>

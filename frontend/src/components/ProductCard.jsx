@@ -8,7 +8,6 @@ export default function ProductCard({ product }) {
 
   return (
     <div className="relative w-full max-w-[220px] min-h-[320px] mx-auto bg-[#1e1e1e] rounded-xl overflow-hidden shadow-lg cursor-pointer transition-all duration-200 hover:-translate-y-2 hover:shadow-2xl flex flex-col group">
-      {/* Wishlist Button */}
       <div className="absolute top-2 right-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
         <button
           onClick={(e) => {
@@ -31,7 +30,6 @@ export default function ProductCard({ product }) {
         </button>
       </div>
 
-      {/* Image */}
       <Link to={`/product/${product.id}`} className="block">
         <div className="h-[180px] bg-[#222] flex items-center justify-center p-3 overflow-hidden">
           <img
@@ -45,7 +43,6 @@ export default function ProductCard({ product }) {
         </div>
       </Link>
 
-      {/* Product Info */}
       <div className="flex flex-col flex-1 p-3">
         <Link to={`/product/${product.id}`}>
           <h3 className="text-sm font-semibold text-gray-200 line-clamp-2 min-h-[40px] mb-1 hover:text-primary-light transition-colors">
@@ -56,7 +53,6 @@ export default function ProductCard({ product }) {
           {product.price}
         </p>
 
-        {/* Add to Cart Button */}
         <div className="mt-auto">
           <button
             onClick={(e) => {

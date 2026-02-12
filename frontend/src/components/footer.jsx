@@ -6,7 +6,6 @@ export default function Footer() {
     <footer className="bg-bg-darker text-white pt-12 pb-8 border-t border-border-color mt-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
           <div>
             <h5 className="flex items-center gap-2 font-bold text-xl mb-4">
               <img

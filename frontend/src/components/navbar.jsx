@@ -18,16 +18,25 @@ import { useCart } from "../context/CartContext";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
   const { cartTotal, wishlist } = useCart();
   const location = useLocation();
+  const navigate = useNavigate();
 
   const isActive = (path) => location.pathname === path;
+  const handleSearch = (e) => {
+    e.preventDefault();
+    if (searchTerm.trim()) {
+      navigate(`/products?search${encodeURIComponent(searchTerm.trim())}`);
+      setSearchTerm("");
+      setIsOpen(false);
+    }
+  };
 
   return (
     <nav className="bg-bg-darker border-b border-border-color shadow-lg py-3 sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
           <Link
             to="/"
             className="flex items-center gap-2 text-xl font-bold text-text-light"
@@ -40,7 +49,6 @@ export default function Navbar() {
             Shopify
           </Link>
 
-          {/* Mobile Toggle */}
           <button
             className="lg:hidden text-text-light text-2xl"
             onClick={() => setIsOpen(!isOpen)}
@@ -48,11 +56,9 @@ export default function Navbar() {
             {isOpen ? <FaTimes /> : <FaBars />}
           </button>
 
-          {/* Desktop Navigation */}
           <div
             className={`${isOpen ? "flex" : "hidden"} lg:flex flex-col lg:flex-row absolute lg:static top-16 left-0 right-0 bg-bg-darker lg:bg-transparent p-4 lg:p-0 gap-4 lg:gap-6 items-center lg:flex-1 lg:justify-between z-50`}
           >
-            {/* Nav Links */}
             <ul className="flex flex-col lg:flex-row gap-2 lg:gap-1 lg:ml-8">
               <li>
                 <Link
@@ -80,7 +86,6 @@ export default function Navbar() {
               </li>
             </ul>
 
-            {/* Search Bar */}
             <form
               className="flex w-full lg:w-auto lg:flex-1 lg:max-w-md lg:mx-8"
               onSubmit={(e) => e.preventDefault()}
@@ -100,7 +105,6 @@ export default function Navbar() {
               </div>
             </form>
 
-            {/* Right Nav */}
             <ul className="flex items-center gap-4">
               <li>
                 <Link

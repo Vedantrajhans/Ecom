@@ -46,7 +46,6 @@ export default function Cart() {
       </div>
 
       <div className="grid lg:grid-cols-3 gap-6">
-        {/* Cart Items */}
         <div className="lg:col-span-2 space-y-4">
           {cart.map((item, index) => {
             const priceNum = Number(item.price.replace(/[^0-9.]/g, ""));
@@ -58,7 +57,6 @@ export default function Cart() {
                 className="bg-bg-darker border border-border-color rounded-xl p-4 hover:border-primary transition-colors"
               >
                 <div className="flex flex-col md:flex-row md:items-center gap-4">
-                  {/* Image */}
                   <div className="w-20 h-20 flex-shrink-0">
                     <img
                       src={item.img}
@@ -67,7 +65,6 @@ export default function Cart() {
                     />
                   </div>
 
-                  {/* Info */}
                   <div className="flex-1">
                     <h6 className="font-semibold text-text-light mb-1">
                       {item.title}
@@ -78,7 +75,6 @@ export default function Cart() {
                     </p>
                   </div>
 
-                  {/* Quantity */}
                   <div className="flex items-center gap-2">
                     <button
                       onClick={() =>
@@ -107,14 +103,12 @@ export default function Cart() {
                     </button>
                   </div>
 
-                  {/* Total */}
                   <div className="text-right">
                     <p className="font-bold text-text-light">
                       ₹{itemTotal.toLocaleString("en-IN")}
                     </p>
                   </div>
 
-                  {/* Remove */}
                   <button
                     onClick={() => removeFromCart(index)}
                     className="p-2 text-red-500 border border-red-500 rounded hover:bg-red-500 hover:text-white transition-all"
@@ -127,7 +121,6 @@ export default function Cart() {
           })}
         </div>
 
-        {/* Order Summary */}
         <div className="lg:col-span-1">
           <div className="bg-bg-darker border border-border-color rounded-xl sticky top-24">
             <div className="p-4 border-b border-border-color">

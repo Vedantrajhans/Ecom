@@ -37,7 +37,6 @@ export default function ProductDetail() {
 
   return (
     <div className="container mx-auto px-4 py-8">
-      {/* Breadcrumb */}
       <nav className="mb-6">
         <ol className="flex items-center gap-2 text-sm">
           <li>
@@ -57,7 +56,6 @@ export default function ProductDetail() {
       </nav>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {/* Image */}
         <div className="bg-[#1e1e1e] rounded-xl p-6 border border-border-color">
           <img
             src={product.img}
@@ -66,7 +64,6 @@ export default function ProductDetail() {
           />
         </div>
 
-        {/* Info */}
         <div>
           <span className="inline-block bg-gray-600 text-white text-sm px-3 py-1 rounded mb-3">
             {product.category}
@@ -87,7 +84,6 @@ export default function ProductDetail() {
             </p>
           </div>
 
-          {/* Features */}
           <div className="space-y-3 mb-8">
             <div className="flex items-center gap-3">
               <FaTruck className="text-primary-light" />
@@ -103,7 +99,6 @@ export default function ProductDetail() {
             </div>
           </div>
 
-          {/* Buttons */}
           <div className="flex flex-wrap gap-4 mb-6">
             <button
               onClick={() => addToCart(product)}
